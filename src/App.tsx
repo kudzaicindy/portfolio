@@ -6,7 +6,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import { Helmet } from 'react-helmet';
+// Remove this line: import { Helmet } from 'react-helmet';
 
 const AppContainer = styled.div`
   font-family: 'Roboto', sans-serif;
@@ -57,9 +57,11 @@ const Footer = styled.footer`
 const App: React.FC = () => {
   return (
     <AppContainer>
+      {/* Remove this block:
       <Helmet>
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
       </Helmet>
+      */}
       <Header>
         <Logo to="/">KudzaiCindy</Logo>
         <Nav>
