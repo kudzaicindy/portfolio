@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Home from './components/Home';
 import About from './components/About';
@@ -55,32 +55,30 @@ const Footer = styled.footer`
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <AppContainer>
-        <Header>
-          <Logo to="/">KudzaiCindy</Logo>
-          <Nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/skills">Skills</NavLink>
-            <NavLink to="/portfolio">Portfolio</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-          </Nav>
-        </Header>
+    <AppContainer>
+      <Header>
+        <Logo to="/">KudzaiCindy</Logo>
+        <Nav>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/skills">Skills</NavLink>
+          <NavLink to="/portfolio">Portfolio</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+        </Nav>
+      </Header>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
-        <Footer>
-          © {new Date().getFullYear()} Kudzaicindyrellapemhiwa. All rights reserved.
-        </Footer>
-      </AppContainer>
-    </Router>
+      <Footer>
+        © {new Date().getFullYear()} Kudzaicindyrellapemhiwa. All rights reserved.
+      </Footer>
+    </AppContainer>
   );
 };
 
