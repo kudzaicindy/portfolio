@@ -1,12 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-// Remove this line: import { Helmet } from 'react-helmet';
 
 const AppContainer = styled.div`
   font-family: 'Roboto', sans-serif;
@@ -56,13 +55,8 @@ const Footer = styled.footer`
 
 const App: React.FC = () => {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <AppContainer>
-        {/* Remove this block:
-        <Helmet>
-          <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-        </Helmet>
-        */}
         <Header>
           <Logo to="/">KudzaiCindy</Logo>
           <Nav>

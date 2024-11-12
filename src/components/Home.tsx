@@ -116,7 +116,7 @@ const Home: React.FC = () => {
   );
 
   const handleDownload = () => {
-    const resumeUrl = process.env.PUBLIC_URL + '/0_Kudzai Pemhiwa Resume_112638 (1).pdf';
+    const resumeUrl = 'https://kudzaicindyrella.github.io/portfolio/0_Kudzai Pemhiwa Resume_112638 (1).pdf';
     
     const link = document.createElement('a');
     link.href = resumeUrl;
@@ -153,7 +153,10 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: 'spring', stiffness: 260, damping: 20 }}
             >
-              <ProfileImage src={`${process.env.PUBLIC_URL}/anime.jpg`} alt="Kudzai Cindyrella Pemhiwa" />
+              <ProfileImage 
+                src={`https://kudzaicindyrella.github.io/portfolio/anime.jpg`} 
+                alt="Kudzai Cindyrella Pemhiwa" 
+              />
             </ProfilePicture>
             <div>
               <SectionTitle>Hi, I'm Kudzai Cindyrella Pemhiwa</SectionTitle>
