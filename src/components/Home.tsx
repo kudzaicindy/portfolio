@@ -153,7 +153,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: 'spring', stiffness: 260, damping: 20 }}
             >
-              <ProfileImage src={process.env.PUBLIC_URL + '/anime.jpg'} alt="Kudzai Cindyrella Pemhiwa" />
+              <ProfileImage src={`${process.env.PUBLIC_URL}/anime.jpg`} alt="Kudzai Cindyrella Pemhiwa" />
             </ProfilePicture>
             <div>
               <SectionTitle>Hi, I'm Kudzai Cindyrella Pemhiwa</SectionTitle>
